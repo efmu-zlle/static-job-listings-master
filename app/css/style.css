@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+:root {
+    /* Primary */
+    --desaturated-dark-cyan: hsl(180, 29%, 50%);
+    /* Neutral */
+    --light-grayish-cyan-bg: hsl(180, 52%, 96%); 
+    --light-grayish-cyan-fb: hsl(180, 31%, 95%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --very-dark-grayish: hsl(180, 14%, 20%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, 
+*::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--light-grayish-cyan-bg);
+}
+
+header > .img {
+    background-image: url('../images/bg-header-mobile.svg');
+    background-color: var(--desaturated-dark-cyan);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+}
+
+main {
+    height: fit-content;
+    width: 100%;
+}
+
+.container {
+    padding: 2rem 1.75rem; 
+    position: relative;
+    top: -65px;
+}
+
+.container > .container__search {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0;
+    box-shadow: 0px 0px 10px var(--dark-grayish-cyan);
+    border-radius: 5px;
+    margin-bottom: 2.55rem;
+    min-height: 61px;
+}
+
+.container > .container__search.hidden {
+    visibility: hidden;
+}
+
+.container > .container__search > .search__right {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container > .container__search > .search__right span {
+    font-size: .75rem;
+    font-weight: bold;
+    font-family: inherit;
+    background-color:hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+    border-radius: .25rem;
+    border: transparent;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: .75rem;
+}
+
+.container > .container__search > .search__right > span > button {
+    border: transparent;
+    background-color: var(--desaturated-dark-cyan);
+    width: 30px;
+    margin-left: .50rem;
+    height: 29px;
+    position: relative;
+}
+
+.container > .container__search > .search__right > span > button::after {
+    content: '';
+    background-image: url('../images/icon-remove.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.container > .container__search > .search__right > span > button:hover {
+    cursor: pointer;
+    background-color: var(--very-dark-grayish);
+    transition: 200ms ease-in;
+}
+
+.container > .container__search .search__left {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.50rem;
+}
+
+.container > .container__search > .search__left > button {
+    font-size: .75rem;
+    font-weight: bold;
+    font-family: inherit;
+    background-color: transparent;
+    color: var(--dark-grayish-cyan);
+    border: transparent;
+    opacity: .8;
+}
+
+.container > .container__search > .search__left > button:hover {
+    color:hsl(180, 29%, 50%);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.card {
+    background-color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px var(--dark-grayish-cyan);
+    padding-left: 1.50rem;
+    padding-top: 2.25rem;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+.card > .top__card {
+    border-bottom: 1px solid rgba(0,0,0,0.19);
+    max-width: 90%;
+    padding-bottom: .10rem;
+}
+
+.card > .top__card .icon > img {
+    width: 3rem;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+.card > .top__card > .header__ele {
+    margin-bottom: .50rem;
+}
+
+.card > .top__card > .header__ele > .company {
+    font-size: .75rem;
+    color:hsl(180, 29%, 50%);
+    margin-right: .50rem;
+}
+
+.card > .top__card > .header__ele > .new {
+    font-size: .60rem;
+    text-transform: uppercase;
+    background-color: var(--desaturated-dark-cyan);
+    color: var(--light-grayish-cyan-fb);
+    border-radius: 200px;
+    padding: .35rem .40rem .25rem;
+    margin-right: .25rem;
+}
+
+.card > .top__card > .header__ele > .featured {
+    font-size: .60rem;
+    text-transform: uppercase;
+    background-color: var(--very-dark-grayish);
+    color: var(--light-grayish-cyan-fb);
+    border-radius: 200px;
+    padding: .35rem .40rem .25rem;
+}
+
+.card > .top__card > .header__title > strong {
+    font-size: .83rem;
+}
+
+.card > .top__card > .header__title strong:hover {
+    color: hsl(180, 29%, 50%);
+    transition: 200ms ease-out;
+    cursor: pointer;
+}
+
+.card > .top__card > .header__info ul {
+    font-size: .70rem;
+    color: var(--dark-grayish-cyan);
+    display: flex;
+    padding-left: 0;
+    opacity: .8;
+}
+
+.card > .top__card > .header__info ul li:nth-child(1) {
+    list-style: none;
+}
+
+.card > .top__card > .header__info ul li {
+    margin-right: 1.10rem;
+}
+
+.card > .bottom__card {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1.150rem;
+}
+
+.card > .bottom__card button {
+    font-size: .75rem;
+    font-weight: bold;
+    font-family: inherit;
+    background-color:hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+    border-radius: .25rem;
+    border: transparent;
+    padding: .50rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card > .bottom__card > button:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: hsl(180, 31%, 95%);
+    cursor: pointer;
+    transition: 200ms ease-in;
+}
+
+@media only screen and (min-width: 890px) {
+    .container {
+        padding: 2rem 5rem;
+        min-width: 940px; 
+    }
+
+    .card > header > .img {
+        background-image: url('../images/bg-header-desktop.svg');
+        background-color: var(--desaturated-dark-cyan);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 150px;
+    }
+
+    .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: -10px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin-top: 0;
+    }
+
+    .card > .top__card {
+        border: none;
+        padding: 0 0 2rem 8rem;
+    }
+
+    .card > .top__card > .icon > img {
+        width: 5rem;
+        top: 20%;
+        left: 50px;
+    }
+
+    .card > .bottom__card {
+        margin: 0;
+        padding: 0 1rem 1rem 0;
+    }
+}
